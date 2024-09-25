@@ -30,8 +30,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          remote: ${{ secrets.REMOTE_DIR }}
           source: 'dist/*'
+          target: ${{ secrets.REMOTE_DIR }}
 
       - name: Reload Nginx
         uses: appleboy/ssh-action@master
